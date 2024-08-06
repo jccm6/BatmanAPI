@@ -1,0 +1,39 @@
+{
+  "name": "batman-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "license": "MIT",
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "scripts": {
+    "build": "strapi build",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "4.25.6",
+    "@strapi/plugin-documentation": "^4.25.6",
+    "@strapi/plugin-i18n": "4.25.6",
+    "@strapi/plugin-users-permissions": "4.25.6",
+    "@strapi/strapi": "4.25.6",
+    "better-sqlite3": "8.6.0",
+    "pg": "^8.12.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "sqlite3": "^5.1.7",
+    "strapi-plugin-protected-populate": "^1.3.6",
+    "styled-components": "5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "bf80df07-c3b5-433c-a10a-3769766d2822"
+  }
+}

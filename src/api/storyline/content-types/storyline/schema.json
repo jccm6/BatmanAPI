@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "storylines",
+  "info": {
+    "singularName": "storyline",
+    "pluralName": "storylines",
+    "displayName": "Storyline",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "issues": {
+      "type": "json"
+    },
+    "publication_date": {
+      "type": "date"
+    },
+    "writer": {
+      "type": "string"
+    },
+    "artist": {
+      "type": "string"
+    },
+    "characters": {
+      "type": "json"
+    },
+    "locations": {
+      "type": "json"
+    },
+    "image_url": {
+      "type": "string"
+    }
+  }
+}

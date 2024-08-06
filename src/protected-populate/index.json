@@ -1,0 +1,146 @@
+{
+   "GET /api/characters/:id": {
+      "content-type": "api::character.character",
+      "fields": [
+         "name",
+         "alias",
+         "alive",
+         "role",
+         "description",
+         "creator",
+         "first_appearance",
+         "gender",
+         "id",
+         "image_url",
+         "abilities"
+      ],
+      "populate": {
+         "allies": {
+            "fields": [
+               "name",
+               "id",
+               "alias",
+               "image_url"
+            ],
+            "populate": {
+               "image_url": {
+                  "fields": [
+                     "url"
+                  ]
+               }
+            }
+         }
+      }
+   },
+   "GET /api/characters": {
+      "content-type": "api::character.character",
+      "fields": [
+         "name",
+         "alias",
+         "alive",
+         "role",
+         "description",
+         "creator",
+         "first_appearance",
+         "gender",
+         "id",
+         "abilities",
+         "image_url"
+      ],
+      "populate": {
+         "allies": {
+            "fields": [
+               "name",
+               "alias",
+               "id",
+               "image_url"
+            ]
+         }
+      }
+   },
+   "GET /api/locations": {
+      "content-type": "api::location.location",
+      "fields": [
+         "name",
+         "description",
+         "notable_events",
+         "first_appearance",
+         "related_characters",
+         "coordinates",
+         "type",
+         "creator",
+         "id"
+      ]
+   },
+   "GET /api/concepts": {
+      "content-type": "api::concept.concept",
+      "fields": [
+         "name",
+         "description",
+         "related_characters",
+         "related_locations",
+         "first_appearance",
+         "creator",
+         "type",
+         "id"
+      ]
+   },
+   "GET /api/locations/:id": {
+      "content-type": "api::location.location",
+      "fields": [
+         "name",
+         "description",
+         "notable_events",
+         "first_appearance",
+         "related_characters",
+         "coordinates",
+         "type",
+         "creator",
+         "id"
+      ]
+   },
+   "GET /api/storylines": {
+      "content-type": "api::storyline.storyline",
+      "fields": [
+         "name",
+         "description",
+         "issues",
+         "publication_date",
+         "writer",
+         "artist",
+         "characters",
+         "locations",
+         "image_url",
+         "id"
+      ]
+   },
+   "GET /api/storylines/:id": {
+      "content-type": "api::storyline.storyline",
+      "fields": [
+         "name",
+         "description",
+         "issues",
+         "publication_date",
+         "writer",
+         "artist",
+         "locations",
+         "characters",
+         "image_url",
+         "id"
+      ]
+   },
+   "GET /api/concepts/:id": {
+      "content-type": "api::concept.concept",
+      "fields": [
+         "name",
+         "description",
+         "related_characters",
+         "related_locations",
+         "first_appearance",
+         "creator",
+         "image_url",
+         "type",
+         "id"
+      ]
+   }
+}
