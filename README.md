@@ -1,61 +1,60 @@
-# 🚀 Getting started with Strapi
+# <img src="https://i.imgur.com/7HolFch.png" alt="Batman Favicon" width="40" height="30"> Batman Characters API Project
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+## Overview
 
-### `develop`
+This project is a Strapi-based API that provides information on various endpoints related to Batman characters, locations, concepts, and storylines. The API is currently under development, and contributions are not yet permitted.
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+## Endpoints
 
-```
-npm run develop
-# or
-yarn develop
-```
+### GET /characters
 
-### `start`
+Retrieve a paginated list of all Batman characters. Each page contains up to 10 characters.
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+### GET /locations
 
-```
-npm run start
-# or
-yarn start
-```
+Retrieve a paginated list of all locations in the Batman universe. Each page contains up to 10 locations.
 
-### `build`
+### GET /concepts
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+Retrieve a paginated list of all concepts related to Batman. Each page contains up to 10 concepts.
 
-```
-npm run build
-# or
-yarn build
-```
+### GET /storylines
 
-## ⚙️ Deployment
+Retrieve a paginated list of all Batman storylines. Each page contains up to 10 storylines.
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+## Usage
 
-```
-yarn strapi deploy
-```
+For production use, the API is available at:
 
-## 📚 Learn more
+- `https://api.batmanapi.com/v1/characters`
+- `https://api.batmanapi.com/v1/locations`
+- `https://api.batmanapi.com/v1/concepts`
+- `https://api.batmanapi.com/v1/storylines`
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+You can test the endpoints using a tool like Thunder Client or simply by visiting the endpoints in your web browser.
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+Example:
 
-## ✨ Community
+- `GET https://api.batmanapi.com/v1/characters`
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+### Pagination
 
----
+All endpoints support pagination. To retrieve specific pages, use the `pagination[page]` query parameter.
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+Example:
+
+- `GET https://api.batmanapi.com/v1/characters?pagination[page]=2`
+
+Each page contains up to 10 items.
+
+## Contributing
+
+This project is currently under development, and contributions are not yet permitted. Please check back later for updates on how you can contribute.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any questions or inquiries, please contact [jc@jccm.dev](mailto:jc@jccm.dev).

@@ -2,7 +2,7 @@ module.exports = ({ env }) => ({
   auth: {
     secret: env("ADMIN_JWT_SECRET"),
   },
-  url: "/custom-admin",
+  url: env("DASHBOARD_PATH"),
   apiToken: {
     salt: env("API_TOKEN_SALT"),
   },
